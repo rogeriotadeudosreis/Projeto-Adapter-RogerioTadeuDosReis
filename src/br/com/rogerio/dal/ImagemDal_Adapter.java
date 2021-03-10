@@ -36,7 +36,7 @@ public class ImagemDal_Adapter implements Interface_ImagemAlvo{
     @Override
     public ImageIcon carregarImagem(String caminho) throws Exception {
         
-       return objeto.distribuirImagem(caminho);
+       return objeto.distribuirImagem(carregarPath());
     }
     
 }

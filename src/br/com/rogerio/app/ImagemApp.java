@@ -95,19 +95,18 @@ public class ImagemApp extends javax.swing.JFrame {
             /*
             * Aqui tínhamos um objeto original fornecedor de imagens, mas a 
             * empresa faliu!
-            */
+             */
             Interface_ImagemAlvo imagemDal = new ImagemDal();
             //jTextFieldPath.setText(imagemDal.carregarPath());
             //jLabelExibirImagem.setIcon(imagemDal.carregarImagem(jTextFieldPath.getText()));
-            
+
             /*
-            * Aqui contratamos outra fornecedores de imagens, porém com uma
+            * Aqui contratamos outra fornecedora de imagens, porém com uma
             * interface adaptadora
-            */
+             */
             Interface_ImagemAlvo objetoAdapter = new ImagemDal_Adapter();
             jTextFieldPath.setText(objetoAdapter.carregarPath());
             jLabelExibirImagem.setIcon(objetoAdapter.carregarImagem(jTextFieldPath.getText()));
-           
 
         } catch (Exception erro) {
             JOptionPane.showMessageDialog(null, erro.getMessage());
